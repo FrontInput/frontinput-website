@@ -77,7 +77,7 @@ function App() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg max-w-md w-full m-4">
             <h3 className="text-lg font-bold mb-4">Datenschutzerklärung (revDSG 2023)</h3>
-            <p className="text-sm mb-4">Infron.ch verarbeitet nur notwendige Daten (E-Mail, 3D-Dateien) für Angebote (Art. 6 DSG). Kein Verkauf an Dritte. Widerruf: info@infron.ch. Cookies: Nur Session (kein consent nötig). Volltext: [Link zu PDF].</p>
+            <p className="text-sm mb-4">Infron.ch verarbeitet nur notwendige Daten (E-Mail, 3D-Dateien) für Angebote (Art. 6 DSG). Kein Verkauf an Dritte. Widerruf: info@infron.ch. Cookies: Nur Session (kein Consent nötig). Volltext: [Link zu PDF].</p>
             <button onClick={() => setShowDatenschutz(false)} className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">Schließen</button>
           </div>
         </div>
