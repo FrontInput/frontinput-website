@@ -77,7 +77,7 @@ function App() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg max-w-md w-full m-4">
             <h3 className="text-lg font-bold mb-4">Datenschutzerklärung (revDSG 2023)</h3>
-            <p className="text-sm mb-4">FrontInput.ch verarbeitet nur notwendige Daten (E-Mail, 3D-Dateien) für Angebote (Art. 6 DSG). Kein Verkauf an Dritte. Widerruf: info@frontinput.ch. Cookies: Nur Session (kein Consent nötig). Volltext: [Link zu PDF].</p>
+            <p className="text-sm mb-4">Infron.ch verarbeitet nur notwendige Daten (E-Mail, 3D-Dateien) für Angebote (Art. 6 DSG). Kein Verkauf an Dritte. Widerruf: info@infron.ch. Cookies: Nur Session (kein Consent nötig). Volltext: [Link zu PDF].</p>
             <button onClick={() => setShowDatenschutz(false)} className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">Schließen</button>
           </div>
         </div>
@@ -159,7 +159,7 @@ function App() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400 animate-pulse">FrontInput.ch</h1>
+              <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400 animate-pulse">Infron.ch</h1>
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#home" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Home</a>
@@ -188,7 +188,7 @@ function App() {
       <section id="home" className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-6xl font-bold mb-6 drop-shadow-lg">Maßgefertigte Aluminium-Frontplatten & Eingabesysteme</h2>
+          <h2 className="text-6xl font-bold mb-4 drop-shadow-lg">Maßgefertigte Aluminium-Frontplatten & Eingabesysteme</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90 drop-shadow-md">Präzise Fertigung – lade deine 3D-Zeichnung hoch und erhalte ein personalisiertes Angebot in 24 Stunden. Sichere Zahlung & 14 Tage Widerruf.</p>
           <button 
             onClick={() => document.querySelector('#upload').scrollIntoView({ behavior: 'smooth' })}
@@ -203,7 +203,7 @@ function App() {
       {/* Upload Section */}
       <section id="upload" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-4xl font-bold text-gray-800 dark:text-white mb-6">Deine 3D-Zeichnung hochladen</h3>
+          <h3 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">Deine 3D-Zeichnung hochladen</h3>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-lg mx-auto">Sicher, schnell und einfach – Drag & Drop oder klicke. Wir analysieren und kalkulieren in Echtzeit. Kein Risiko: 14 Tage Widerrufsrecht.</p>
           
           <div 
@@ -212,7 +212,7 @@ function App() {
           >
             <input {...getInputProps()} />
             {isDragActive ? (
-              <div className="animate-bounce">
+              <div className="animation-bounce">
                 <p className="text-2xl text-blue-500 dark:text-blue-400 mb-2">Datei ablegen...</p>
               </div>
             ) : (
@@ -227,17 +227,17 @@ function App() {
           {isUploading && (
             <div className="mt-6">
               <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                <div className="bg-blue-600 h-2.5 rounded-full animate-pulse" style={{ width: '60%' }}></div>
+                <div className="bg-blue-600 h-2.5 rounded-full animation-pulse" style={{ width: '60%' }}></div>
               </div>
               <p className="text-sm text-gray-600 mt-2">Wird verarbeitet...</p>
             </div>
           )}
           
           {uploadedFile && (
-            <p className="mt-6 text-green-600 dark:text-green-400 font-semibold text-xl animate-bounce">Erfolgreich hochgeladen: {uploadedFile} – Danke!</p>
+            <p className="mt-6 text-green-600 dark:text-green-400 font-semibold text-xl animation-bounce">Erfolgreich hochgeladen: {uploadedFile} – Danke!</p>
           )}
 
-          <button onClick={handleBestellen} className="mt-8 bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+          <button onClick={handleBestellen} className="mt-8 bg-green-600 text-white px-8 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors">
             Bestellen (ab 50 CHF) – Sichere Zahlung
           </button>
         </div>
@@ -246,7 +246,7 @@ function App() {
       {/* Features Section */}
       <section id="services" className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">Warum FrontInput.ch?</h3>
+          <h3 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">Warum Infron.ch?</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl text-center group hover:shadow-2xl hover:scale-105 transition-all duration-500">
               <span className="text-5xl mb-4 block text-blue-500 group-hover:rotate-12 transition-transform duration-300">⚡</span>
@@ -298,12 +298,12 @@ function App() {
       <footer id="contact" className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-4">
-            <p className="text-lg">Kontakt: info@frontinput.ch | +41 79 123 45 67</p>
+            <p className="text-lg">Kontakt: info@infron.ch | +41 79 123 45 67</p>
           </div>
           <div className="flex justify-center space-x-6 mb-4">
             <button onClick={() => openSocial('https://linkedin.com/in/sebastian-nacht')} className="text-gray-400 hover:text-white transition-colors duration-300">LinkedIn</button>
-            <button onClick={() => openSocial('https://instagram.com/frontinput_ch')} className="text-gray-400 hover:text-white transition-colors duration-300">Instagram</button>
-            <button onClick={() => openSocial('https://x.com/frontinput_ch')} className="text-gray-400 hover:text-white transition-colors duration-300">X</button>
+            <button onClick={() => openSocial('https://instagram.com/infron_ch')} className="text-gray-400 hover:text-white transition-colors duration-300">Instagram</button>
+            <button onClick={() => openSocial('https://x.com/infron_ch')} className="text-gray-400 hover:text-white transition-colors duration-300">X</button>
           </div>
           <div className="text-center text-sm mb-4">
             <button onClick={() => setShowAGB(true)} className="text-gray-400 hover:text-white transition-colors">AGB</button> | 
@@ -312,13 +312,13 @@ function App() {
           </div>
           <div className="text-center text-xs opacity-75">
             <h4 className="font-bold mb-2">Impressum (UWG Art. 3)</h4>
-            <p>FrontInput.ch</p>
+            <p>Infron.ch</p>
             <p>Sebastian Nacht, Eigentümer</p>
             <p>Musterstraße 123, 8000 Zürich, Schweiz</p>
             <p>UID: CHE-123.456.789 MWST</p>
-            <p>E-Mail: info@frontinput.ch | Tel: +41 79 123 45 67</p>
+            <p>E-Mail: info@infron.ch | Tel: +41 79 123 45 67</p>
             <p>AGB: [Link zu PDF] | Datenschutz: [Link zu PDF]</p>
-            <p>© 2025 FrontInput.ch – Alle Rechte vorbehalten</p>
+            <p>© 2025 Infron.ch – Alle Rechte vorbehalten</p>
           </div>
         </div>
       </footer>
