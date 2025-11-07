@@ -77,7 +77,7 @@ function App() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg max-w-md w-full m-4">
             <h3 className="text-lg font-bold mb-4">Datenschutzerklärung (revDSG 2023)</h3>
-            <p className="text-sm mb-4">Infron.ch verarbeitet nur notwendige Daten (E-Mail, 3D-Dateien) für Angebote (Art. 6 DSG). Kein Verkauf an Dritte. Widerruf: info@infron.ch. Cookies: Nur Session (kein Consent nötig). Volltext: [Link zu PDF].</p>
+            <p className="text-sm mb-4">Infron.ch verarbeitet nur notwendige Daten (E-Mail, 3D-Dateien) für Angebote (Art. 6 DSG). Kein Verkauf an Dritte. Widerruf: info@infron.ch. Cookies: Nur Session (kein consent nötig). Volltext: [Link zu PDF].</p>
             <button onClick={() => setShowDatenschutz(false)} className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300">Schließen</button>
           </div>
         </div>
@@ -147,7 +147,7 @@ function App() {
                 onChange={(e) => setFormData({...formData, message: e.target.value})}
                 className="w-full p-3 mb-4 border rounded h-24" 
               />
-              <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 transition">Angebot anfordern – In 2 Tagen per E-Mail</button>
+              <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 transition-colors">Angebot anfordern – In 2 Tagen per E-Mail</button>
             </form>
             <button onClick={() => setShowForm(false)} className="mt-4 text-gray-500">Abbrechen</button>
           </div>
@@ -185,11 +185,11 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-32 relative overflow-hidden">
+      <section id="home" className="text-white py-32 relative overflow-hidden bg-cover bg-center h-96 md:h-screen" style={{backgroundImage: 'url(/hero-bg.jpg)'}}>
         <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-6xl font-bold mb-4 drop-shadow-lg">Maßgefertigte Aluminium-Frontplatten & Eingabesysteme</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90 drop-shadow-md">Präzise Fertigung – lade deine 3D-Zeichnung hoch und erhalte ein personalisiertes Angebot in 24 Stunden. Sichere Zahlung & 14 Tage Widerruf.</p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center justify-center h-full">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Maßgefertigte Aluminium-Frontplatten & Eingabesysteme</h2>
+          <p className="text-lg md:text-xl mb-8 max-w-3xl opacity-90 drop-shadow-md">Präzise Fertigung – lade deine 3D-Zeichnung hoch und erhalte ein personalisiertes Angebot in 24 Stunden. Sichere Zahlung & 14 Tage Widerruf.</p>
           <button 
             onClick={() => document.querySelector('#upload').scrollIntoView({ behavior: 'smooth' })}
             className="bg-white text-blue-600 px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-pulse"
@@ -204,7 +204,7 @@ function App() {
       <section id="upload" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">Deine 3D-Zeichnung hochladen</h3>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-lg mx-auto">Sicher, schnell und einfach – Drag & Drop oder klicke. Wir analysieren und kalkulieren in Echtzeit. Kein Risiko: 14 Tage Widerrufsrecht.</p>
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">Sicher, schnell und einfach – Drag & Drop oder klicke. Wir analysieren und kalkulieren in Echtzeit. Kein Risiko: 14 Tage Widerrufsrecht.</p>
           
           <div 
             {...getRootProps()} 
@@ -212,7 +212,7 @@ function App() {
           >
             <input {...getInputProps()} />
             {isDragActive ? (
-              <div className="animation-bounce">
+              <div className="animate-bounce">
                 <p className="text-2xl text-blue-500 dark:text-blue-400 mb-2">Datei ablegen...</p>
               </div>
             ) : (
@@ -227,17 +227,17 @@ function App() {
           {isUploading && (
             <div className="mt-6">
               <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                <div className="bg-blue-600 h-2.5 rounded-full animation-pulse" style={{ width: '60%' }}></div>
+                <div className="bg-blue-600 h-2.5 rounded-full animate-pulse" style={{ width: '60%' }}></div>
               </div>
               <p className="text-sm text-gray-600 mt-2">Wird verarbeitet...</p>
             </div>
           )}
           
           {uploadedFile && (
-            <p className="mt-6 text-green-600 dark:text-green-400 font-semibold text-xl animation-bounce">Erfolgreich hochgeladen: {uploadedFile} – Danke!</p>
+            <p className="mt-6 text-green-600 dark:text-green-400 font-semibold text-xl animate-bounce">Erfolgreich hochgeladen: {uploadedFile} – Danke!</p>
           )}
 
-          <button onClick={handleBestellen} className="mt-8 bg-green-600 text-white px-8 py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+          <button onClick={handleBestellen} className="mt-8 bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
             Bestellen (ab 50 CHF) – Sichere Zahlung
           </button>
         </div>
@@ -313,7 +313,7 @@ function App() {
           <div className="text-center text-xs opacity-75">
             <h4 className="font-bold mb-2">Impressum (UWG Art. 3)</h4>
             <p>Infron.ch</p>
-            <p>Sebastian Nacht, Eigentümer</p>
+            <p>Dragana Ignjatovic, Eigentümerin</p>
             <p>Musterstraße 123, 8000 Zürich, Schweiz</p>
             <p>UID: CHE-123.456.789 MWST</p>
             <p>E-Mail: info@infron.ch | Tel: +41 79 123 45 67</p>
