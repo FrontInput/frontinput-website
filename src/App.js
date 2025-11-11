@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useMemo } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useDropzone } from 'react-dropzone';
-import './App.css'; // Für allgemeine Stile, falls vorhanden
+import './App.css'; 
 
 const App = () => {
     const [email, setEmail] = useState('');
@@ -11,7 +11,6 @@ const App = () => {
     const [submitMessage, setSubmitMessage] = useState('');
 
     const isEmailValid = useMemo(() => {
-        // Einfache E-Mail-Validierung
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }, [email]);
 
@@ -48,14 +47,11 @@ const App = () => {
 
         setIsSubmitting(true);
         setSubmitMessage('Ihre Anfrage wird verarbeitet...');
-
-        // Hier würde die tatsächliche API-Anfrage stattfinden
         await new Promise(resolve => setTimeout(resolve, 2000));
 
         setIsSubmitting(false);
         setSubmitMessage('✅ Vielen Dank! Ihre Datei und Anfragedetails wurden erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.');
         
-        // Formular zurücksetzen
         setEmail('');
         setProjectDetails('');
         setUploadedFile('Keine Datei hochgeladen');
@@ -76,14 +72,11 @@ const App = () => {
 
         setIsSubmitting(true);
         setSubmitMessage('Ihre Anfrage wird verarbeitet...');
-
-        // Simulierte Anfrage für den Nur-Anfragen-Button
         await new Promise(resolve => setTimeout(resolve, 2000));
 
         setIsSubmitting(false);
         setSubmitMessage('✅ Vielen Dank! Ihre Anfrage ohne Datei wurde erfolgreich übermittelt. Wir melden uns in Kürze bei Ihnen.');
         
-        // Formular zurücksetzen
         setEmail('');
         setProjectDetails('');
         setUploadedFile('Keine Datei hochgeladen');
@@ -97,7 +90,7 @@ const App = () => {
             </Helmet>
             
             <div className="min-h-screen bg-white flex flex-col items-center">
-                {/* Header/Navigation mit Logo und Slogan - KORRIGIERTE VERSION */}
+                {/* Header/Navigation mit Logo und Slogan */}
                 <header className="w-full max-w-7xl mx-auto p-4 flex justify-between items-center border-b border-gray-200">
                     <div className="flex items-center">
                         {/* Logo und Slogan */}
@@ -119,17 +112,17 @@ const App = () => {
                 </header>
 
                 <main className="flex-grow w-full max-w-7xl px-4 py-16">
-                    {/* Hero Content mit optimiertem USP-Statement */}
+                    {/* Hero Content - KORRIGIERTE H1-ÜBERSCHRIFT */}
                     <div className="text-center max-w-4xl mx-auto mb-12 px-4">
                         <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-3">
-                            Massgefertigte Aluminium-Frontplatten <br className="hidden sm:inline"/>& Eingabesysteme
+                            Massgefertigte Inputsysteme <br className="hidden sm:inline"/>und Frontpanels
                         </h1>
-                        {/* NEUE SUB-HEADLINE FÜR KLARHEIT */}
+                        {/* KORRIGIERTE SUB-HEADLINE */}
                         <p className="text-xl md:text-2xl text-indigo-600 font-semibold mb-6">
-                            Ihr zertifizierter Partner für Präzision in der Schweiz.
+                            Ihr erfahrener Partner für Präzision in der Schweiz.
                         </p>
 
-                        {/* NEUE USP-BULLETS FÜR VERTRAUEN */}
+                        {/* USP-BULLETS FÜR VERTRAUEN */}
                         <div className="flex justify-center flex-wrap gap-x-8 gap-y-2 mb-10 text-gray-700">
                             <span className="flex items-center text-md">
                                 <span className="text-green-500 mr-2">✓</span> **Lieferung 10-14 Tage**
@@ -141,11 +134,10 @@ const App = () => {
                                 <span className="text-green-500 mr-2">✓</span> **Inkl. Optical-Bonding-Service**
                             </span>
                         </div>
-                        {/* ENDE NEUE ELEMENTE */}
                     </div>
 
                     {/* Produkt-/Service-Übersicht (4 Hauptkacheln) */}
-                    <section className="mt-8 mb-16 max-w-5xl mx-auto">
+                    <section className="mt-8 mb-10 max-w-5xl mx-auto">
                         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Unsere Kernkompetenzen für Ihren Erfolg</h2>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
                             <div className="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow bg-white">
@@ -165,18 +157,19 @@ const App = () => {
                             </div>
                             <div className="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow bg-white">
                                 <span className="text-4xl text-orange-500 mb-3 block">🤝</span>
-                                <h3 className="font-bold text-lg mb-1">Q-Management CH</h3>
-                                <p className="text-sm text-gray-600">Zertifizierte Prozesse und Schweizer Ansprechpartner.</p>
+                                <h3 className="font-bold text-lg mb-1">Service & Qualität</h3>
+                                <p className="text-sm text-gray-600">Prozessbegleitung und Schweizer Ansprechpartner.</p>
                             </div>
                         </div>
                     </section>
-                    {/* Ende Produkt-/Service-Übersicht */}
 
-                    {/* NEUE DETAILLIERTE PRODUKT-LISTE */}
-                    <section className="mt-10 mb-16 max-w-4xl mx-auto px-4">
-                        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Detaillierte Leistungen im Überblick</h2>
+                    {/* NEUE KOMPLETTE BESCHREIBUNG DES ANGEBOTS (WIE URSPRÜNGLICH GEWÜNSCHT) */}
+                    <section className="mt-10 mb-16 max-w-4xl mx-auto px-4 text-gray-700">
+                        <p className="mb-6 leading-relaxed">
+                            Als Ihr kompetenter Partner in der Schweiz liefern wir nicht nur **massgefertigte Eingabesysteme**, sondern bieten Ihnen die gesamte Bandbreite an Lösungen von der **CNC-Frontplatte** bis zur komplexen **HMI Komplettlösung**. Wir sind spezialisiert auf die präzise Realisierung Ihrer technischen Anforderungen für den industriellen Einsatz.
+                        </p>
+                        <h3 className="text-xl font-bold text-gray-800 mb-4">Unser Leistungsspektrum im Detail:</h3>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4 text-left">
-                            
                             <div className="flex items-start">
                                 <span className="text-indigo-600 mr-3 mt-1">●</span>
                                 <p className="text-gray-700 font-medium">HMI Komplettlösungen</p>
@@ -187,7 +180,7 @@ const App = () => {
                             </div>
                             <div className="flex items-start">
                                 <span className="text-indigo-600 mr-3 mt-1">●</span>
-                                <p className="text-gray-700 font-medium">Displays/Touch</p>
+                                <p className="text-gray-700 font-medium">Displays/Touch (Inkl. Optical Bonding)</p>
                             </div>
                             
                             <div className="flex items-start">
@@ -220,10 +213,9 @@ const App = () => {
                                 <span className="text-indigo-600 mr-3 mt-1">●</span>
                                 <p className="text-gray-700 font-medium">Gedruckte Leiterbahnen FPC</p>
                             </div>
-                            
                         </div>
                     </section>
-                    {/* ENDE NEUE DETAILLIERTE PRODUKT-LISTE */}
+                    {/* ENDE DETAILLIERTE BESCHREIBUNG */}
 
                     {/* Formularsektion */}
                     <div className="max-w-3xl mx-auto bg-gray-50 p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-200">
