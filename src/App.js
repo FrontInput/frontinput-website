@@ -159,7 +159,7 @@ function App() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400 animate-pulse">Infron GmbH</h1>
+              <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400 animate-pulse">InFron GmbH</h1>
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#home" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Home</a>
@@ -188,8 +188,8 @@ function App() {
       <section id="home" className="text-white py-32 relative overflow-hidden bg-cover bg-center h-96 md:h-screen" style={{backgroundImage: 'url(/hero-bg.jpg)'}}>
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center justify-center h-full">
-          <h1 className="text-2xl md:text-4xl font-bold mb-2">Infron GmbH</h1>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Massgefertigte Aluminium-Frontplatten & Eingabesysteme</h2>
+          <h1 className="text-2xl md:text-4xl font-bold mb-2">InFron GmbH</h1>
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Massgefertigte Aluminium-Front Panels & Eingabesysteme</h2>
           <p className="text-lg md:text-xl mb-8 max-w-3xl opacity-90 drop-shadow-md">Präzise Fertigung – lade deine 3D-Zeichnung hoch und erhalte ein personalisiertes Angebot in 24 Stunden. Sichere Zahlung.</p>
           <button 
             onClick={() => document.querySelector('#upload').scrollIntoView({ behavior: 'smooth' })}
@@ -246,7 +246,7 @@ function App() {
       {/* Features Section */}
       <section id="services" className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">Warum Infron.ch?</h3>
+          <h3 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-16">Warum InFron GmbH?</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl text-center group hover:shadow-2xl hover:scale-105 transition-all duration-500">
               <span className="text-5xl mb-4 block text-blue-500 group-hover:rotate-12 transition-transform duration-300">⚡</span>
@@ -303,13 +303,13 @@ function App() {
           </div>
           <div className="text-center text-xs opacity-75">
             <h4 className="font-bold mb-2">Impressum (UWG Art. 3)</h4>
-            <p>Infron GmbH</p>
+            <p>InFron GmbH</p>
             <p>Dragana Ignjatovic, Eigentümerin</p>
             <p>Musterstraße 123, 8000 Zürich, Schweiz</p>
             <p>UID: CHE-123.456.789 MWST</p>
             <p>E-Mail: info@infron.ch | Tel: +41 76 398 15 05</p>
             <p>AGB: [Link zu PDF] | Datenschutz: [Link zu PDF]</p>
-            <p>© 2025 Infron GmbH – Alle Rechte vorbehalten</p>
+            <p>© 2025 InFron GmbH – Alle Rechte vorbehalten</p>
           </div>
         </div>
       </footer>
