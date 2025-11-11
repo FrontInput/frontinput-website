@@ -97,7 +97,7 @@ const App = () => {
             </Helmet>
             
             <div className="min-h-screen bg-white flex flex-col items-center">
-                {/* Header/Navigation mit Logo und Slogan */}
+                {/* Header/Navigation mit Logo und Slogan - KORRIGIERTE VERSION */}
                 <header className="w-full max-w-7xl mx-auto p-4 flex justify-between items-center border-b border-gray-200">
                     <div className="flex items-center">
                         {/* Logo und Slogan */}
