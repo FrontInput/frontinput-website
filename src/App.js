@@ -86,7 +86,8 @@ const App = () => {
         <HelmetProvider>
             <Helmet>
                 <title>InFron GmbH | HMI Komplettlösungen, Displays & Folientastaturen (Swiss Quality Management)</title>
-                <meta name="description" content="Ihr Schweizer Partner für technische Expertise und Qualitätsmanagement von massgefertigten Frontpanels, industriellen Displays und Tastaturen. Schnelle Prototypen-Herstellung und Liefersicherheit." />
+                {/* METADATEN ANGEPASST */}
+                <meta name="description" content="Ihr Partner für Inputsysteme mit Schweizer Expertise. Wir bieten präzisionsgefertigte Frontpanels und Displays, gemanagt mit Schweizer Qualitätsstandards (Produktion in China)." />
             </Helmet>
             
             <div className="min-h-screen bg-white flex flex-col items-center">
@@ -95,9 +96,8 @@ const App = () => {
                     <div className="flex items-center">
                         {/* Logo und Slogan */}
                         <a href="/" className="flex items-center">
-                            {/* Stellen Sie sicher, dass Sie die Datei infron-logo.png in den public/ Ordner kopiert haben! */}
                             <img src="/infron-logo.png" alt="InFron GmbH Logo" className="h-10 mr-3" /> 
-                            <div className="hidden sm:block"> {/* Slogan nur auf grösseren Bildschirmen */}
+                            <div className="hidden sm:block"> 
                                 <p className="text-sm text-gray-600">Input systems & Front panels, always in front</p>
                             </div>
                         </a>
@@ -112,14 +112,14 @@ const App = () => {
                 </header>
 
                 <main className="flex-grow w-full max-w-7xl px-4 py-16">
-                    {/* Hero Content - KORRIGIERTE H1-ÜBERSCHRIFT */}
-                    <div className="text-center max-w-4xl mx-auto mb-12 px-4">
+                    {/* Hero Content - VISUELL OPTIMIERT MIT HINTERGRUNDVERLAUF */}
+                    <div className="text-center max-w-4xl mx-auto mb-12 px-4 py-10 bg-gradient-to-b from-gray-50 to-white rounded-lg"> 
                         <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-3">
                             Massgefertigte Inputsysteme <br className="hidden sm:inline"/>und Frontpanels
                         </h1>
-                        {/* KORRIGIERTE SUB-HEADLINE */}
+                        {/* SUB-HEADLINE ANGEPASST */}
                         <p className="text-xl md:text-2xl text-indigo-600 font-semibold mb-6">
-                            Ihr erfahrener Partner für Präzision in der Schweiz.
+                            Ihr Partner für Inputsysteme mit **Schweizer Expertise und Q-Management**.
                         </p>
 
                         {/* USP-BULLETS FÜR VERTRAUEN */}
@@ -143,7 +143,7 @@ const App = () => {
                             <div className="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow bg-white">
                                 <span className="text-4xl text-orange-500 mb-3 block">⚙️</span>
                                 <h3 className="font-bold text-lg mb-1">CNC-Frontplatten</h3>
-                                <p className="text-sm text-gray-600">Aluminium und Edelstahl, hochpräzise gefräst.</p>
+                                <p className="text-sm text-gray-600">Aluminium und Edelstahl, hochpräzise gefertigt.</p>
                             </div>
                             <div className="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow bg-white">
                                 <span className="text-4xl text-orange-500 mb-3 block">🖥️</span>
@@ -157,16 +157,16 @@ const App = () => {
                             </div>
                             <div className="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow bg-white">
                                 <span className="text-4xl text-orange-500 mb-3 block">🤝</span>
-                                <h3 className="font-bold text-lg mb-1">Service & Qualität</h3>
+                                <h3 className="font-bold text-lg mb-1">Swiss Q-Management</h3>
                                 <p className="text-sm text-gray-600">Prozessbegleitung und Schweizer Ansprechpartner.</p>
                             </div>
                         </div>
                     </section>
 
-                    {/* NEUE KOMPLETTE BESCHREIBUNG DES ANGEBOTS (WIE URSPRÜNGLICH GEWÜNSCHT) */}
+                    {/* DETAILLIERTE BESCHREIBUNG DES ANGEBOTS */}
                     <section className="mt-10 mb-16 max-w-4xl mx-auto px-4 text-gray-700">
                         <p className="mb-6 leading-relaxed">
-                            Als Ihr kompetenter Partner in der Schweiz liefern wir nicht nur **massgefertigte Eingabesysteme**, sondern bieten Ihnen die gesamte Bandbreite an Lösungen von der **CNC-Frontplatte** bis zur komplexen **HMI Komplettlösung**. Wir sind spezialisiert auf die präzise Realisierung Ihrer technischen Anforderungen für den industriellen Einsatz.
+                            Als Ihr kompetenter Partner in der Schweiz liefern wir nicht nur **massgefertigte Eingabesysteme**, sondern bieten Ihnen die gesamte Bandbreite an Lösungen von der CNC-Frontplatte bis zur komplexen HMI Komplettlösung. Wir sind spezialisiert auf die präzise Realisierung Ihrer technischen Anforderungen für den industriellen Einsatz. **Die Produktion unserer Komponenten findet in Asien statt, wobei die gesamte Projektleitung und das Qualitätsmanagement durch unser Team in der Schweiz gewährleistet werden.**
                         </p>
                         <h3 className="text-xl font-bold text-gray-800 mb-4">Unser Leistungsspektrum im Detail:</h3>
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4 text-left">
@@ -306,11 +306,11 @@ const App = () => {
                     </div>
                 </main>
 
-                {/* Footer mit Trust-Elementen */}
+                {/* Footer mit Trust-Elementen - ANGEPASST */}
                 <footer className="bg-gray-100 mt-20 py-8 border-t-4 border-orange-500 w-full">
                     <div className="container mx-auto text-center text-gray-700 px-4">
                         <p className="font-semibold mb-2 text-indigo-800">
-                            Qualität aus der Schweiz. <span className="text-orange-500">Ihr direkter Draht zur Produktion.</span>
+                            Swiss Management. <span className="text-orange-500">Weltweite Produktion.</span> Ihr direkter Draht zur Lösung.
                         </p>
                         <p>© {new Date().getFullYear()} InFron GmbH. Alle Rechte vorbehalten. | <a href="tel:+41763981505" className="hover:text-indigo-600 transition-colors">Telefon: +41 76 398 15 05</a></p>
                         <p className="text-xs mt-1 text-gray-500">Impressum | Datenschutzerklärung | AGB</p>
