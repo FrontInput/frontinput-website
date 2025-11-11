@@ -86,7 +86,6 @@ const App = () => {
         <HelmetProvider>
             <Helmet>
                 <title>InFron GmbH | HMI Komplettlösungen, Displays & Folientastaturen (Swiss Quality Management)</title>
-                {/* METADATEN ANGEPASST */}
                 <meta name="description" content="Ihr Partner für Inputsysteme mit Schweizer Expertise. Wir bieten präzisionsgefertigte Frontpanels und Displays, gemanagt mit Schweizer Qualitätsstandards (Produktion in China)." />
             </Helmet>
             
@@ -112,27 +111,31 @@ const App = () => {
                 </header>
 
                 <main className="flex-grow w-full max-w-7xl px-4 py-16">
-                    {/* Hero Content - VISUELL OPTIMIERT MIT HINTERGRUNDVERLAUF */}
-                    <div className="text-center max-w-4xl mx-auto mb-12 px-4 py-10 bg-gradient-to-b from-gray-50 to-white rounded-lg"> 
-                        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-3">
-                            Massgefertigte Inputsysteme <br className="hidden sm:inline"/>und Frontpanels
-                        </h1>
-                        {/* SUB-HEADLINE ANGEPASST */}
-                        <p className="text-xl md:text-2xl text-indigo-600 font-semibold mb-6">
-                            Ihr Partner für Inputsysteme mit **Schweizer Expertise und Q-Management**.
-                        </p>
+                    {/* Hero Content - MIT HINTERGRUNDBILD UND OVERLAY */}
+                    <div className="text-center max-w-4xl mx-auto mb-12 px-4 py-10 rounded-lg relative overflow-hidden hero-image-background"> 
+                        {/* Overlay für bessere Lesbarkeit des Textes auf dem Bild */}
+                        <div className="absolute inset-0 bg-black opacity-10 rounded-lg"></div> 
+                        
+                        {/* Textinhalt des Hero-Bereichs bleibt hier, mit höherem z-index */}
+                        <div className="relative z-10">
+                            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-3">
+                                Massgefertigte Inputsysteme <br className="hidden sm:inline"/>und Frontpanels
+                            </h1>
+                            <p className="text-xl md:text-2xl text-indigo-600 font-semibold mb-6">
+                                Ihr Partner für Inputsysteme mit **Schweizer Expertise und Q-Management**.
+                            </p>
 
-                        {/* USP-BULLETS FÜR VERTRAUEN */}
-                        <div className="flex justify-center flex-wrap gap-x-8 gap-y-2 mb-10 text-gray-700">
-                            <span className="flex items-center text-md">
-                                <span className="text-green-500 mr-2">✓</span> **Lieferung 10-14 Tage**
-                            </span>
-                            <span className="flex items-center text-md">
-                                <span className="text-green-500 mr-2">✓</span> **Prototypen- & Kleinserien-Experte**
-                            </span>
-                            <span className="flex items-center text-md">
-                                <span className="text-green-500 mr-2">✓</span> **Inkl. Optical-Bonding-Service**
-                            </span>
+                            <div className="flex justify-center flex-wrap gap-x-8 gap-y-2 mb-10 text-gray-700">
+                                <span className="flex items-center text-md">
+                                    <span className="text-green-500 mr-2">✓</span> **Lieferung 10-14 Tage**
+                                </span>
+                                <span className="flex items-center text-md">
+                                    <span className="text-green-500 mr-2">✓</span> **Prototypen- & Kleinserien-Experte**
+                                </span>
+                                <span className="flex items-center text-md">
+                                    <span className="text-green-500 mr-2">✓</span> **Inkl. Optical-Bonding-Service**
+                                </span>
+                            </div>
                         </div>
                     </div>
 
@@ -306,7 +309,7 @@ const App = () => {
                     </div>
                 </main>
 
-                {/* Footer mit Trust-Elementen - ANGEPASST */}
+                {/* Footer mit Trust-Elementen */}
                 <footer className="bg-gray-100 mt-20 py-8 border-t-4 border-orange-500 w-full">
                     <div className="container mx-auto text-center text-gray-700 px-4">
                         <p className="font-semibold mb-2 text-indigo-800">
@@ -317,6 +320,20 @@ const App = () => {
                     </div>
                 </footer>
             </div>
+            
+            {/* Floating Action Button (FAB) - "Experten"-Blase */}
+            <a 
+                href="https://wa.me/41763981505" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="fixed bottom-6 right-6 z-50 bg-indigo-600 text-white rounded-full shadow-2xl p-4 flex items-center space-x-2 
+                            hover:bg-indigo-700 transition-all duration-300 transform hover:scale-105"
+                aria-label="Fragen Sie den Experten via WhatsApp"
+            >
+                <span className="text-2xl">💬</span> 
+                <span className="hidden sm:block font-bold text-lg pr-2">Experten-Chat</span>
+            </a>
+
         </HelmetProvider>
     );
 }

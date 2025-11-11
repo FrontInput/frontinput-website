@@ -1,38 +1,18 @@
+/* Standard-CSS für React, das meist nicht benötigt wird, aber oft in neuen Projekten enthalten ist */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Neue, notwendige CSS-Regel für das Hero-Bild */
+.hero-image-background {
+  /* Pfad zu Ihrem Bild im public/ Ordner */
+  background-image: url('/hero-background.jpg'); 
+  /* Stellt sicher, dass das Bild den gesamten Bereich abdeckt */
+  background-size: cover; 
+  /* Zentriert das Bild */
+  background-position: center; 
+  /* Verhindert die Wiederholung des Bildes */
+  background-repeat: no-repeat; 
+  /* Option: Fügen Sie eine leichte, lokale Deckkraft hinzu, wenn das Bild zu hell ist */
+  /* filter: brightness(90%); */ 
 }
