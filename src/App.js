@@ -3,9 +3,6 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useDropzone } from 'react-dropzone';
 import './App.css'; 
 
-// 1. BILD IMPORTIEREN (WICHTIG: Pfad muss korrekt zum verschobenen Bild sein)
-import heroBackground from './publichero-background.jpg'; 
-
 const App = () => {
     const [email, setEmail] = useState('');
     const [projectDetails, setProjectDetails] = useState('');
@@ -114,39 +111,26 @@ const App = () => {
                 </header>
 
                 <main className="flex-grow w-full max-w-7xl px-4 py-16">
-                    {/* Hero Content - MIT HINTERGRUNDBILD ÜBER INLINE-STYLE */}
-                    <div 
-                        className="text-center max-w-4xl mx-auto mb-12 px-4 py-10 rounded-lg relative overflow-hidden shadow-xl" 
-                        style={{
-                            backgroundImage: `url(${heroBackground})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            minHeight: '400px',
-                        }}
-                    > 
-                        {/* Overlay für bessere Lesbarkeit des Textes auf dem Bild */}
-                        <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div> 
-                        
-                        {/* Textinhalt des Hero-Bereichs mit weisser Farbe für bessere Lesbarkeit */}
-                        <div className="relative z-10 text-white"> 
-                            <h1 className="text-4xl md:text-6xl font-extrabold mb-3">
-                                Massgefertigte Inputsysteme <br className="hidden sm:inline"/>und Frontpanels
-                            </h1>
-                            <p className="text-xl md:text-2xl text-orange-400 font-semibold mb-6">
-                                Ihr Partner für Inputsysteme mit **Schweizer Expertise und Q-Management**.
-                            </p>
+                    {/* Hero Content - MIT HINTERGRUNDVERLAUF (Farbverlauf statt Bild) */}
+                    <div className="text-center max-w-4xl mx-auto mb-12 px-4 py-10 bg-gradient-to-b from-gray-50 to-white rounded-lg shadow-xl"> 
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-800 mb-3">
+                            Massgefertigte Inputsysteme <br className="hidden sm:inline"/>und Frontpanels
+                        </h1>
+                        <p className="text-xl md:text-2xl text-indigo-600 font-semibold mb-6">
+                            Ihr Partner für Inputsysteme mit **Schweizer Expertise und Q-Management**.
+                        </p>
 
-                            <div className="flex justify-center flex-wrap gap-x-8 gap-y-2 mb-10 text-white">
-                                <span className="flex items-center text-md">
-                                    <span className="text-green-400 mr-2">✓</span> **Lieferung 10-14 Tage**
-                                </span>
-                                <span className="flex items-center text-md">
-                                    <span className="text-green-400 mr-2">✓</span> **Prototypen- & Kleinserien-Experte**
-                                </span>
-                                <span className="flex items-center text-md">
-                                    <span className="text-green-400 mr-2">✓</span> **Inkl. Optical-Bonding-Service**
-                                </span>
-                            </div>
+                        {/* Hier wurde die Farbe auf text-gray-700 erhöht für bessere Sichtbarkeit */}
+                        <div className="flex justify-center flex-wrap gap-x-8 gap-y-2 mb-10 text-gray-700">
+                            <span className="flex items-center text-md font-semibold">
+                                <span className="text-green-500 mr-2">✓</span> Lieferung 10-14 Tage
+                            </span>
+                            <span className="flex items-center text-md font-semibold">
+                                <span className="text-green-500 mr-2">✓</span> Prototypen- & Kleinserien-Experte
+                            </span>
+                            <span className="flex items-center text-md font-semibold">
+                                <span className="text-green-500 mr-2">✓</span> Inkl. Optical-Bonding-Service
+                            </span>
                         </div>
                     </div>
 
@@ -154,11 +138,14 @@ const App = () => {
                     <section className="mt-8 mb-10 max-w-5xl mx-auto">
                         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Unsere Kernkompetenzen für Ihren Erfolg</h2>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                            
+                            {/* BLOCK MIT "FRONTPLATTEN" (KORRIGIERT) */}
                             <div className="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow bg-white">
                                 <span className="text-4xl text-orange-500 mb-3 block">⚙️</span>
-                                <h3 className="font-bold text-lg mb-1">CNC-Frontplatten</h3>
+                                <h3 className="font-bold text-lg mb-1">Frontplatten</h3> 
                                 <p className="text-sm text-gray-600">Aluminium und Edelstahl, hochpräzise gefertigt.</p>
                             </div>
+                            
                             <div className="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow bg-white">
                                 <span className="text-4xl text-orange-500 mb-3 block">🖥️</span>
                                 <h3 className="font-bold text-lg mb-1">Industrielle Displays</h3>
@@ -320,14 +307,22 @@ const App = () => {
                     </div>
                 </main>
 
-                {/* Footer mit Trust-Elementen */}
+                {/* Footer mit Trust-Elementen und Links */}
                 <footer className="bg-gray-100 mt-20 py-8 border-t-4 border-orange-500 w-full">
                     <div className="container mx-auto text-center text-gray-700 px-4">
                         <p className="font-semibold mb-2 text-indigo-800">
                             Swiss Management. <span className="text-orange-500">Weltweite Produktion.</span> Ihr direkter Draht zur Lösung.
                         </p>
-                        <p>© {new Date().getFullYear()} InFron GmbH. Alle Rechte vorbehalten. | <a href="tel:+41763981505" className="hover:text-indigo-600 transition-colors">Telefon: +41 76 398 15 05</a></p>
-                        <p className="text-xs mt-1 text-gray-500">Impressum | Datenschutzerklärung | AGB</p>
+                        <p className="mb-2">© {new Date().getFullYear()} InFron GmbH. Alle Rechte vorbehalten. | <a href="tel:+41763981505" className="hover:text-indigo-600 transition-colors">Telefon: +41 76 398 15 05</a></p>
+                        
+                        {/* HIER WURDEN DIE RECHTS-LINKS AKTIVIERT */}
+                        <div className="text-xs space-x-3 text-gray-500 font-medium">
+                            <a href="https://www.frontinput.ch/impressum" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Impressum</a>
+                            <span>|</span>
+                            <a href="https://www.frontinput.ch/datenschutzerklaerung" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Datenschutzerklärung</a>
+                            <span>|</span>
+                            <a href="https://www.frontinput.ch/agb" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">AGB</a>
+                        </div>
                     </div>
                 </footer>
             </div>

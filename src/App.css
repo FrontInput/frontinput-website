@@ -4,12 +4,5 @@
   text-align: center;
 }
 
-.hero-image-background {
-  /* HIER: Absoluter Pfad mit Ihrem korrekten Dateinamen */
-  background-image: url('/publichero-background.jpg'); 
-  
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-}
-/* ... (Restliche, ungenutzte Regeln, falls vorhanden) */
+/* Alle anderen standardmässigen React-CSS-Regeln (.App-logo, .App-header, @keyframes) wurden entfernt,
+   da sie nicht benötigt werden. Die fehlerhafte .hero-image-background-Regel ist ebenfalls gelöscht. */
