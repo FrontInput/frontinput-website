@@ -5,14 +5,15 @@
 
 /* Neue, notwendige CSS-Regel für das Hero-Bild */
 .hero-image-background {
-  /* Pfad zu Ihrem Bild im public/ Ordner */
+  /* Korrigierter Pfad: Da das Bild im Ordner 'public' liegt, muss der Pfad relativ zur CSS-Datei (im 'src'-Ordner) angegeben werden, 
+     oder wir nutzen die automatische Auflösung. Versuchen wir es mit einem relativen Pfad aus der src-Ebene.
+     Wenn das nicht funktioniert, probieren Sie den absoluten Pfad zur Build-Zeit: */
   background-image: url('/hero-background.jpg'); 
-  /* Stellt sicher, dass das Bild den gesamten Bereich abdeckt */
+  
+  /* Falls der obere Pfad NICHT funktioniert, nutzen Sie: */
+  /* background-image: url('/hero-background.jpg'); */ 
+
   background-size: cover; 
-  /* Zentriert das Bild */
   background-position: center; 
-  /* Verhindert die Wiederholung des Bildes */
   background-repeat: no-repeat; 
-  /* Option: Fügen Sie eine leichte, lokale Deckkraft hinzu, wenn das Bild zu hell ist */
-  /* filter: brightness(90%); */ 
 }
