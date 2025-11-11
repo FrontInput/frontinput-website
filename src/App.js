@@ -144,7 +144,7 @@ const App = () => {
                         {/* ENDE NEUE ELEMENTE */}
                     </div>
 
-                    {/* Produkt-/Service-Übersicht */}
+                    {/* Produkt-/Service-Übersicht (4 Hauptkacheln) */}
                     <section className="mt-8 mb-16 max-w-5xl mx-auto">
                         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Unsere Kernkompetenzen für Ihren Erfolg</h2>
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
@@ -171,6 +171,59 @@ const App = () => {
                         </div>
                     </section>
                     {/* Ende Produkt-/Service-Übersicht */}
+
+                    {/* NEUE DETAILLIERTE PRODUKT-LISTE */}
+                    <section className="mt-10 mb-16 max-w-4xl mx-auto px-4">
+                        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Detaillierte Leistungen im Überblick</h2>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4 text-left">
+                            
+                            <div className="flex items-start">
+                                <span className="text-indigo-600 mr-3 mt-1">●</span>
+                                <p className="text-gray-700 font-medium">HMI Komplettlösungen</p>
+                            </div>
+                            <div className="flex items-start">
+                                <span className="text-indigo-600 mr-3 mt-1">●</span>
+                                <p className="text-gray-700 font-medium">IMD (In-Mold-Decoration)</p>
+                            </div>
+                            <div className="flex items-start">
+                                <span className="text-indigo-600 mr-3 mt-1">●</span>
+                                <p className="text-gray-700 font-medium">Displays/Touch</p>
+                            </div>
+                            
+                            <div className="flex items-start">
+                                <span className="text-indigo-600 mr-3 mt-1">●</span>
+                                <p className="text-gray-700 font-medium">Glasoberflächen/Technische Gläser</p>
+                            </div>
+                            <div className="flex items-start">
+                                <span className="text-indigo-600 mr-3 mt-1">●</span>
+                                <p className="text-gray-700 font-medium">Folientastaturen</p>
+                            </div>
+                            <div className="flex items-start">
+                                <span className="text-indigo-600 mr-3 mt-1">●</span>
+                                <p className="text-gray-700 font-medium">Silikonschaltmatten</p>
+                            </div>
+
+                            <div className="flex items-start">
+                                <span className="text-indigo-600 mr-3 mt-1">●</span>
+                                <p className="text-gray-700 font-medium">Kapazitive Tastaturen</p>
+                            </div>
+                            <div className="flex items-start">
+                                <span className="text-indigo-600 mr-3 mt-1">●</span>
+                                <p className="text-gray-700 font-medium">Bedienfolien, Frontfolien & Dekorfolien</p>
+                            </div>
+                            <div className="flex items-start">
+                                <span className="text-indigo-600 mr-3 mt-1">●</span>
+                                <p className="text-gray-700 font-medium">Frontplatten</p>
+                            </div>
+                            
+                            <div className="flex items-start">
+                                <span className="text-indigo-600 mr-3 mt-1">●</span>
+                                <p className="text-gray-700 font-medium">Gedruckte Leiterbahnen FPC</p>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    {/* ENDE NEUE DETAILLIERTE PRODUKT-LISTE */}
 
                     {/* Formularsektion */}
                     <div className="max-w-3xl mx-auto bg-gray-50 p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-200">
